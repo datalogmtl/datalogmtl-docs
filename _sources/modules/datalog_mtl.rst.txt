@@ -1,0 +1,23 @@
+datalog\_mtl package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   datalog_mtl.automata
+   datalog_mtl.classes
+   datalog_mtl.graphutil
+   datalog_mtl.materialization
+   datalog_mtl.optimization
+   datalog_mtl.utils
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl
+   :members:
+   :undoc-members:
+   :show-inheritance:

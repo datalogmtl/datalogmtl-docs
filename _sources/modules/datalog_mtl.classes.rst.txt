@@ -1,0 +1,53 @@
+datalog\_mtl.classes package
+============================
+
+Submodules
+----------
+
+datalog\_mtl.classes.atom module
+--------------------------------
+
+.. automodule:: datalog_mtl.classes.atom
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.classes.interval module
+------------------------------------
+
+.. automodule:: datalog_mtl.classes.interval
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.classes.literal module
+-----------------------------------
+
+.. automodule:: datalog_mtl.classes.literal
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.classes.rule module
+--------------------------------
+
+.. automodule:: datalog_mtl.classes.rule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.classes.term module
+--------------------------------
+
+.. automodule:: datalog_mtl.classes.term
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl.classes
+   :members:
+   :undoc-members:
+   :show-inheritance:

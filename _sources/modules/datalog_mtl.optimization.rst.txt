@@ -1,0 +1,29 @@
+datalog\_mtl.optimization package
+=================================
+
+Submodules
+----------
+
+datalog\_mtl.optimization.forward\_backward\_propagating module
+---------------------------------------------------------------
+
+.. automodule:: datalog_mtl.optimization.forward_backward_propagating
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.optimization.sufficientcondition module
+----------------------------------------------------
+
+.. automodule:: datalog_mtl.optimization.sufficientcondition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl.optimization
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>datalog_mtl.classes package &mdash; A Python Library for DatalogMTL Rule Language  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="datalog_mtl.graphutil package" href="datalog_mtl.graphutil.html" />
+    <link rel="prev" title="datalog_mtl.automata package" href="datalog_mtl.automata.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/datalogmtl_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="datalog_mtl.html">datalog_mtl package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="datalog_mtl.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="datalog_mtl.automata.html">datalog_mtl.automata package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.buichi_automata">datalog_mtl.automata.buichi_automata module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.guess">datalog_mtl.automata.guess module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.satisfy">datalog_mtl.automata.satisfy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.utils">datalog_mtl.automata.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.window">datalog_mtl.automata.window module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">datalog_mtl.classes package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes.atom">datalog_mtl.classes.atom module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes.interval">datalog_mtl.classes.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes.literal">datalog_mtl.classes.literal module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes.rule">datalog_mtl.classes.rule module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes.term">datalog_mtl.classes.term module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datalog_mtl.classes">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="datalog_mtl.graphutil.html">datalog_mtl.graphutil package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.dependency_tree">datalog_mtl.graphutil.dependency_tree module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.graph">datalog_mtl.graphutil.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.topological_sort">datalog_mtl.graphutil.topological_sort module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.union_find">datalog_mtl.graphutil.union_find module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="datalog_mtl.materialization.html">datalog_mtl.materialization package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.apply">datalog_mtl.materialization.apply module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.build_index">datalog_mtl.materialization.build_index module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.coalesce">datalog_mtl.materialization.coalesce module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.join">datalog_mtl.materialization.join module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.join_util">datalog_mtl.materialization.join_util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.materialize">datalog_mtl.materialization.materialize module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.utils">datalog_mtl.materialization.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="datalog_mtl.optimization.html">datalog_mtl.optimization package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.optimization.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization.forward_backward_propagating">datalog_mtl.optimization.forward_backward_propagating module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization.sufficientcondition">datalog_mtl.optimization.sufficientcondition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="datalog_mtl.utils.html">datalog_mtl.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.conversion">datalog_mtl.utils.conversion module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.loader">datalog_mtl.utils.loader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.normalize">datalog_mtl.utils.normalize module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.operate_dataset">datalog_mtl.utils.operate_dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.parser">datalog_mtl.utils.parser module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.html#module-datalog_mtl">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datalog_mtl.automata.html">datalog_mtl.automata package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.buichi_automata">datalog_mtl.automata.buichi_automata module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.guess">datalog_mtl.automata.guess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.satisfy">datalog_mtl.automata.satisfy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.utils">datalog_mtl.automata.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata.window">datalog_mtl.automata.window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.automata.html#module-datalog_mtl.automata">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">datalog_mtl.classes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes.atom">datalog_mtl.classes.atom module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes.interval">datalog_mtl.classes.interval module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes.literal">datalog_mtl.classes.literal module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes.rule">datalog_mtl.classes.rule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes.term">datalog_mtl.classes.term module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datalog_mtl.classes">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datalog_mtl.graphutil.html">datalog_mtl.graphutil package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.dependency_tree">datalog_mtl.graphutil.dependency_tree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.graph">datalog_mtl.graphutil.graph module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.topological_sort">datalog_mtl.graphutil.topological_sort module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil.union_find">datalog_mtl.graphutil.union_find module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.graphutil.html#module-datalog_mtl.graphutil">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datalog_mtl.materialization.html">datalog_mtl.materialization package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.apply">datalog_mtl.materialization.apply module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.build_index">datalog_mtl.materialization.build_index module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.coalesce">datalog_mtl.materialization.coalesce module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.join">datalog_mtl.materialization.join module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.join_util">datalog_mtl.materialization.join_util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.materialize">datalog_mtl.materialization.materialize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization.utils">datalog_mtl.materialization.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.materialization.html#module-datalog_mtl.materialization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datalog_mtl.optimization.html">datalog_mtl.optimization package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.optimization.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization.forward_backward_propagating">datalog_mtl.optimization.forward_backward_propagating module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization.sufficientcondition">datalog_mtl.optimization.sufficientcondition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.optimization.html#module-datalog_mtl.optimization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datalog_mtl.utils.html">datalog_mtl.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.conversion">datalog_mtl.utils.conversion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.loader">datalog_mtl.utils.loader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.normalize">datalog_mtl.utils.normalize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.operate_dataset">datalog_mtl.utils.operate_dataset module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils.parser">datalog_mtl.utils.parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datalog_mtl.utils.html#module-datalog_mtl.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">A Python Library for DatalogMTL Rule Language</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="datalog_mtl.html">datalog_mtl package</a> &raquo;</li>
+        
+      <li>datalog_mtl.classes package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/modules/datalog_mtl.classes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="datalog-mtl-classes-package">
+<h1>datalog_mtl.classes package<a class="headerlink" href="#datalog-mtl-classes-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-datalog_mtl.classes.atom">
+<span id="datalog-mtl-classes-atom-module"></span><h2>datalog_mtl.classes.atom module<a class="headerlink" href="#module-datalog_mtl.classes.atom" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.atom.Atom">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Atom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.atom.Atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>An atom class consists of a predicate, a tuple of terms (constants or variables) and a temporal interval,
+e.g., A(X, mike)&#64;[1,2] or A(X, mike)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.atom.Atom.get_entity">
+<span class="sig-name descname"><span class="pre">get_entity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.atom.Atom.get_entity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.atom.Atom.get_predicate">
+<span class="sig-name descname"><span class="pre">get_predicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.atom.Atom.get_predicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.atom.Atom.set_entity">
+<span class="sig-name descname"><span class="pre">set_entity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.atom.Atom.set_entity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-datalog_mtl.classes.interval">
+<span id="datalog-mtl-classes-interval-module"></span><h2>datalog_mtl.classes.interval module<a class="headerlink" href="#module-datalog_mtl.classes.interval" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_open</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_open</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.add">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement v1- add v2-, and v1+ add v2+, where v- represents the left value of the Interval instance and v+
+denotes the right value of the Interval instance.
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a newly-created Interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.circle_add">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">circle_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.circle_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement v1- add v2+, and v1+ add v2-, where v- represents the left value of the Interval instance and v+
+denotes the right value of the Interval instance.
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a newly-created Interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.circle_sub">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">circle_sub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.circle_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement v1- sub v2-, and v1+ sub v2+, where v- represents the left value of the Interval instance and v+
+denotes the right value of the Interval instance.
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a newly-created Interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.compare">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">compare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intervals1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervals2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare two interval lists to see whether they are equal
+:param intervals1:
+:type intervals1: list of Interval instances
+:param intervals2:
+:type intervals2: list of Intervals instances</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.intersection">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intersection of v1 and v2
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None or a newly-created interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.is_valid_interval">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">is_valid_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_open</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_open</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.is_valid_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the given four values can form a valid Interval.
+:param left_value:
+:type left_value: float
+:param right_value:
+:type right_value: float
+:param left_open:
+:type left_open: boolean
+:param right_open:
+:type right_open: boolean</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.sub">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">sub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement v1- sub v2+, and v1+ sub v2-, where v- represents the left value of the Interval instance and v+
+denotes the right value of the Interval instance.
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a newly-created Interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.interval.Interval.union">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.interval.Interval.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the union of v1 and v2 if v1 and v2 have an intersection part, else return None.
+:param v1:
+:type v1: an Interval instance
+:param v2:
+:type v2: an Interval instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None or a newly-created interval instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-datalog_mtl.classes.literal">
+<span id="datalog-mtl-classes-literal-module"></span><h2>datalog_mtl.classes.literal module<a class="headerlink" href="#module-datalog_mtl.classes.literal" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.BinaryLiteral">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">BinaryLiteral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_atom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_atom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.BinaryLiteral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The BinaryLiteral class is used to store binary literal, in which there are two literal separated by
+Until or Since Operator, e.g. A(X)Since[1,2]B(X,Y)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.BinaryLiteral.get_op_name">
+<span class="sig-name descname"><span class="pre">get_op_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.BinaryLiteral.get_op_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Literal">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Literal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Literal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Literal class is for storing a literal consisting of one atom with one or multiple MTL operators,
+e.g., Boxminus[1,2]Professor(X)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Literal.get_entity">
+<span class="sig-name descname"><span class="pre">get_entity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Literal.get_entity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Literal.get_op_name">
+<span class="sig-name descname"><span class="pre">get_op_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Literal.get_op_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Literal.get_predicate">
+<span class="sig-name descname"><span class="pre">get_predicate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Literal.get_predicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Literal.set_entity">
+<span class="sig-name descname"><span class="pre">set_entity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Literal.set_entity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.literal.Operator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.literal.Operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The operator class is designed for storing six MTL operators, e.g., Boxminus[1,2],
+Boxplus(1,2), Diamondplus[3,4], Diamondminus[1,2], Since[1,2], Until[2,3]</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datalog_mtl.classes.rule">
+<span id="datalog-mtl-classes-rule-module"></span><h2>datalog_mtl.classes.rule module<a class="headerlink" href="#module-datalog_mtl.classes.rule" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.rule.Rule">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.rule.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A rule instance consists of two part: a head (an Atom instance) and
+a body (a list of  Literal or BinarayLiteral Instances)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datalog_mtl.classes.term">
+<span id="datalog-mtl-classes-term-module"></span><h2>datalog_mtl.classes.term module<a class="headerlink" href="#module-datalog_mtl.classes.term" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datalog_mtl.classes.term.Term">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'constant'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.term.Term" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datalog_mtl.classes.term.Term.new_term">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">new_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'constant'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datalog_mtl.classes.term.Term.new_term" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-datalog_mtl.classes">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-datalog_mtl.classes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="datalog_mtl.graphutil.html" class="btn btn-neutral float-right" title="datalog_mtl.graphutil package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="datalog_mtl.automata.html" class="btn btn-neutral float-left" title="datalog_mtl.automata package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Dimmy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+datalog\_mtl.materialization package
+====================================
+
+Submodules
+----------
+
+datalog\_mtl.materialization.apply module
+-----------------------------------------
+
+.. automodule:: datalog_mtl.materialization.apply
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.build\_index module
+------------------------------------------------
+
+.. automodule:: datalog_mtl.materialization.build_index
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.coalesce module
+--------------------------------------------
+
+.. automodule:: datalog_mtl.materialization.coalesce
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.join module
+----------------------------------------
+
+.. automodule:: datalog_mtl.materialization.join
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.join\_util module
+----------------------------------------------
+
+.. automodule:: datalog_mtl.materialization.join_util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.materialize module
+-----------------------------------------------
+
+.. automodule:: datalog_mtl.materialization.materialize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.materialization.utils module
+-----------------------------------------
+
+.. automodule:: datalog_mtl.materialization.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl.materialization
+   :members:
+   :undoc-members:
+   :show-inheritance:

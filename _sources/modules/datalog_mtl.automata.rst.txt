@@ -1,0 +1,53 @@
+datalog\_mtl.automata package
+=============================
+
+Submodules
+----------
+
+datalog\_mtl.automata.buichi\_automata module
+---------------------------------------------
+
+.. automodule:: datalog_mtl.automata.buichi_automata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.automata.guess module
+----------------------------------
+
+.. automodule:: datalog_mtl.automata.guess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.automata.satisfy module
+------------------------------------
+
+.. automodule:: datalog_mtl.automata.satisfy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.automata.utils module
+----------------------------------
+
+.. automodule:: datalog_mtl.automata.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.automata.window module
+-----------------------------------
+
+.. automodule:: datalog_mtl.automata.window
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl.automata
+   :members:
+   :undoc-members:
+   :show-inheritance:

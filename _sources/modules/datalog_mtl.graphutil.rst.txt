@@ -1,0 +1,45 @@
+datalog\_mtl.graphutil package
+==============================
+
+Submodules
+----------
+
+datalog\_mtl.graphutil.dependency\_tree module
+----------------------------------------------
+
+.. automodule:: datalog_mtl.graphutil.dependency_tree
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.graphutil.graph module
+-----------------------------------
+
+.. automodule:: datalog_mtl.graphutil.graph
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.graphutil.topological\_sort module
+-----------------------------------------------
+
+.. automodule:: datalog_mtl.graphutil.topological_sort
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+datalog\_mtl.graphutil.union\_find module
+-----------------------------------------
+
+.. automodule:: datalog_mtl.graphutil.union_find
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: datalog_mtl.graphutil
+   :members:
+   :undoc-members:
+   :show-inheritance:

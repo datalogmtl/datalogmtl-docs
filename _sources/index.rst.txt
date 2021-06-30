@@ -1,0 +1,22 @@
+Damer: A Simple and Fast Reasoner for DatalogMTL Rule Language
+===========
+Damer is a python library, serving a reasoner for DatalogMTL Rule Language, a kind of knowledge representation language that extends Datalog
+with operators from metric temporal logic (MTL). It provides many easy-to-use and independent interfaces, which are quite useful in coping with
+DatalogMTl-related issues. To our best knowledge, it is the first ope-source library for reasoning temporal ontology-based data with DatlogMTL.
+Implemented methods cover a wide range of theoretic works published in some top conferences, like `IJCAI <https://www.ijcai.org/proceedings/2019/0261.pdf>`_,
+`KR <https://proceedings.kr.org/2020/79/kr2020-0079-walega-et-al.pdf>`_.
+
+We are continuously working on providing more detailed descriptions about this library...
+
+.. toctree::
+   :glob:
+   :maxdepth: 3
+   :caption: Package Reference
+
+   modules/datalog_mtl.rst
+   modules/datalog_mtl.automata.rst
+   modules/datalog_mtl.classes.rst
+   modules/datalog_mtl.graphutil.rst
+   modules/datalog_mtl.materialization.rst
+   modules/datalog_mtl.optimization.rst
+   modules/datalog_mtl.utils.rst
